@@ -1,4 +1,5 @@
 import fastify from "fastify";
+import { router } from "./api/routes/routes";
 
 const app = fastify()
 
@@ -7,3 +8,5 @@ app.listen({
 }).then(() => {
     console.log(`HTTP Server running`)
 })
+
+router(app)
